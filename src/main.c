@@ -24,9 +24,10 @@ int main(int argc, char **argv)
     fd = open (argv[1], O_RDONLY);
     if (fd == -1)
         return (84);
-    fs_understand_return_of_read(fd, buf, nbr_bytes);
+    if (fs_understand_return_of_read(fd, buf, nbr_bytes) == 84)
+        return (84);
+    close(fd);
     buf[nbr_bytes] = '\0';
     create_matrix(buf);
-    close(fd);
     return (0);
 }

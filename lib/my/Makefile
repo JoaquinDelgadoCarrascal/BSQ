@@ -37,7 +37,6 @@ SRC	=	src/my_sup_str_word_to_array.c	\
 		src/my_strstr.c					\
 		src/my_strupcase.c				\
 		src/my_swap.c					\
-		src/my_malloc.c					\
 
 OBJ	=	$(SRC:.c=.o)
 
